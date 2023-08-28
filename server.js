@@ -14,7 +14,6 @@ app.use(cors());
 mongoose.connect(MONGODB_URL);
 
 app.get('/books', async (request, response) => {
-
   try {
     let documents = await BookModel.find({});
     response.json(documents);
@@ -22,8 +21,6 @@ app.get('/books', async (request, response) => {
     console.log('Something went wrong when finding books', error);
     response.status(500).send(error);
   }
-  
-
 });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
