@@ -29,20 +29,43 @@ app.get('/books', async (request, response) => {
 app.post('/books', async (request, response) => {
   try {
     console.log(`Requesting. Here's our request body: `, request.body);
-    let { title, description, status} = request.body;
+    let { title, description, status } = request.body;
     console.log(title + description + status);
     if (!title || !description || !status) {
-      response.status(400).send(`Please send all required object properties!`)
+      response.status(400).send(`Please send all required object properties!`);
     } else {
       let newBook = new BookModel({ title, description, status });
       let book = await newBook.save();
-      console.log('New book created!' + book)
+      console.log('New book created!' + book);
       response.json(book);
     }
-
   } catch (error) {
-    response.status(400).send('Please send correct book object', error)
+    response.status(400).send('Please send correct book object', error);
   }
-})
+});
+
+// DELETE
+app.delete('/books/:bookId', async (request, response) => {
+  if (!request.params.bookId) {
+    request.status(404).send('Please provide a valid book ID');
+    return;
+  }
+
+  console.log('deleting book at ID: ' + request.params.bookId);
+  try {
+    let result = await BookModel.findByIdAndDelete(request.params.bookId);
+    console.log(result);
+    response.status(204).send('SUCCESS');
+
+    // if (!result) {
+    //   response.status(404).send('Book not found');
+    // } else {
+    //   response.status(204).send('Book Deleted!');
+    // }
+  } catch (error) {
+    console.log(error);
+    response.status(500).send('Internal Server Error');
+  }
+});
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
