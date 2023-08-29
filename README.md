@@ -32,10 +32,10 @@ Start time:
 > 1:30pm
 
 Finish time:
-> 
+> 5:30pm
 
 Actual time needed to complete:
-> 
+> 4 hours (for both front and backend)
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
