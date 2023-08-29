@@ -45,25 +45,25 @@ app.post('/books', async (request, response) => {
 })
 
 //DELETE
-app.delete("/books/:id", async (req, res) => {
-  if (!req.params.id) {
-    req.status(404).send('Please provide a valid pokemon ID');
+app.delete("/books/:id", async (request, response) => {
+  if (!request.params.id) {
+    request.status(404).send('Please provide a valid pokemon ID');
     return;
   }
 
-  console.log('deleting books at ID: ' + req.params.id);
+  console.log('deleting books at ID: ' + request.params.id);
   try{
-    let result = await BookModel.findByIdAndDelete(req.params.id);
+    let result = await BookModel.findByIdAndDelete(request.params.id);
     console.log(result);
 
     if (!result){
-      res.status(404).send('Book not found');
+      response.status(404).send('Book not found');
     } else {
-      res.status(204).send('Book Deleted!');
+      response.status(204).send('Book Deleted!');
     }  
   } catch (error) {
     console.error(error)
-    res.status(500).send('Internal Server Error')
+    response.status(500).send('Internal Server Error')
   }
 });
 
