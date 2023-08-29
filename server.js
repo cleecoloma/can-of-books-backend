@@ -10,6 +10,7 @@ const PORT = process.env.PORT;
 const MONGODB_URL = process.env.MONGODB_URL;
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 mongoose.connect(MONGODB_URL);
 
@@ -29,7 +30,7 @@ app.post('/books', async (request, response) => {
   try {
     console.log(`Requesting. Here's our request body: `, request.body);
     let { title, description, status} = request.body;
-
+    console.log(title + description + status);
     if (!title || !description || !status) {
       response.status(400).send(`Please send all required object properties!`)
     } else {
