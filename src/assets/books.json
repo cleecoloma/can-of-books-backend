@@ -1,0 +1,54 @@
+{
+  "books": [
+    {
+      "title": "The Enchanted Garden Adventure",
+      "description": "Join young siblings on a magical journey through their garden, where they discover the wonders of nature and the power of imagination.",
+      "status": true
+    },
+    {
+      "title": "Mystery at Maplewood Manor",
+      "description": "A group of kids solves mysteries in their quaint neighborhood, unraveling secrets and strengthening their bond of friendship along the way.",
+      "status": false
+    },
+    {
+      "title": "The Amazing Space Explorers",
+      "description": "Embark on an intergalactic adventure with a diverse crew of young astronauts as they discover new planets and learn about teamwork.",
+      "status": true
+    },
+    {
+      "title": "Secrets of Whispering Woods",
+      "description": "Follow the adventures of a brave group of forest creatures as they work together to solve mysteries and protect their home.",
+      "status": false
+    },
+    {
+      "title": "The Time-Traveling Treehouse",
+      "description": "Siblings discover a magical treehouse that takes them on time-traveling adventures, where they learn about history and make new friends.",
+      "status": true
+    },
+    {
+      "title": "The Curious Case of Captain Paws",
+      "description": "Join a clever cat detective and his animal friends as they solve whimsical mysteries in their charming village.",
+      "status": false
+    },
+    {
+      "title": "Starry Skies and the Cosmic Quest",
+      "description": "Three young astronomers embark on a cosmic journey to explore the mysteries of the universe, uncovering celestial wonders and friendship.",
+      "status": true
+    },
+    {
+      "title": "The Whimsical World of Wishing Wells",
+      "description": "In a quaint town, children discover a magical wishing well that grants wishes, teaching them valuable lessons about responsibility and selflessness.",
+      "status": false
+    },
+    {
+      "title": "The Puzzle Palace Adventures",
+      "description": "A group of friends explores an enchanted palace filled with puzzles and riddles, challenging their intellect and fostering teamwork.",
+      "status": true
+    },
+    {
+      "title": "Island of the Lost Lighthouse",
+      "description": "Kids become stranded on a mysterious island with a talking lighthouse. Together, they navigate challenges and unravel the island's secrets.",
+      "status": false
+    }
+  ]
+}
