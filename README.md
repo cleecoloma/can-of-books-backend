@@ -37,5 +37,22 @@ Finish time:
 Actual time needed to complete:
 > 4 hours (for both front and backend)
 
+-------------------
+
+Name of feature: 
+> Create
+
+Estimate of time needed to complete: 
+> 2 hours
+
+Start time:
+> 1:00pm
+
+Finish time:
+> 
+
+Actual time needed to complete:
+> 
+
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
