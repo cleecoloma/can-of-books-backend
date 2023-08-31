@@ -4,7 +4,7 @@
 > Chester Lee Coloma
 > David Danilchik
 
-**Version**: 1.1.0 (increment the patch/fix version number if you make more commits past your first submission)
+**Version**: 1.2.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
@@ -53,6 +53,24 @@ Finish time:
 
 Actual time needed to complete:
 > 3.5 hours
+
+-------------------
+
+Name of feature: 
+> Update
+
+Estimate of time needed to complete: 
+> 3 hours
+
+Start time:
+> 2:00pm
+
+Finish time:
+> 6:00pm
+
+Actual time needed to complete:
+> 4 hours
+
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
