@@ -44,6 +44,20 @@ app.post('/books', async (request, response) => {
   }
 });
 
+app.put('/books/:bookId', async (request, response) => {
+  // we need the id
+  let id = request.params.bookId;
+
+  try {
+    await BookModel.replaceOne({ _id: id }, request.body); // req.body - the express object for all data.
+    let newBook = await BookModel.findOne({ _id: id });
+    response.status(200).json(newBook);
+  } catch (e) {
+    console.log(e);
+    response.status(400).send(e);
+  }
+});
+
 // DELETE
 app.delete('/books/:bookId', async (request, response) => {
   if (!request.params.bookId) {
