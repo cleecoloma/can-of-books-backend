@@ -1,11 +1,13 @@
 const jwt = require('jsonwebtoken'); // auth
 const jwksClient = require('jwks-rsa'); // auth
+console.log(process.env.JWKS_URI);
 
 // This is a special function for express called "Middleware"
 // We can simply "use()" this in our server
 // When a user is validated, request.user will contain their information
 // Otherwise, this will force an error
 function verifyUser(request, response, next) {
+  console.log(request.headers);
   function valid(err, user) {
     request.user = user;
     next();
