@@ -5,12 +5,14 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const BookModel = require('./models/BookModel.js');
+const authorize = require('./auth/authorize.js');
 
 const PORT = process.env.PORT;
 const MONGODB_URL = process.env.MONGODB_URL;
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(authorize);
 
 mongoose.connect(MONGODB_URL);
 
